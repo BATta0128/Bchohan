@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Bchohan:jar">
+    <output-path>$USER_HOME$/Desktop/paper/plugins</output-path>
+    <root id="archive" name="Bchohan.jar">
+      <element id="module-output" name="Bchohan.main" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
