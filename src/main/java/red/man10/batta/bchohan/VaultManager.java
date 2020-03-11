@@ -1,4 +1,4 @@
-package red.man10.batta.vaulttest;
+package red.man10.batta.bchohan;
 
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.economy.EconomyResponse;

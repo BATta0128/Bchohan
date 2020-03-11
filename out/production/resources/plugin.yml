@@ -2,4 +2,10 @@ name: Bchohan
 version: 1.0
 main: red.man10.batta.bchohan.Bchohan
 api-version: 1.15
+description: chohanpluginPVC
+depend: [Vault]
+
+commands:
+  bchohan:
+    description: chohancommand
 

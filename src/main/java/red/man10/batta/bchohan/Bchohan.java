@@ -2,16 +2,21 @@ package red.man10.batta.bchohan;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import sun.java2d.xr.MutableInteger;
+//import sun.java2d.xr.MutableInteger;
 
 import java.text.NumberFormat;
 
 public final class Bchohan extends JavaPlugin {
+    int argsint = 0;
+    double playerbal = 0;
+    //VaultManager vault = new VaultManager(this);
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         CommandSender p = sender;
+        Player player = (Player)sender;
         int val = 0;
 
         if(args.length == 0){
@@ -27,8 +32,14 @@ public final class Bchohan extends JavaPlugin {
 
         if(args[0].equalsIgnoreCase("h")) {
 
-            //isNumber(args[1]);
-            tryParse(args[1], )
+            isNumber(args[1]);
+            playerbal = new VaultManager(this).getBalance(player.getUniqueId());
+            if (playerbal >= argsint ) {//次ここから
+            }
+
+
+           // tryParse(args[1]);
+            p.sendMessage("§bあなたは半に" + args[1]+ "円を賭けました。" );
         }
 
         return true;
@@ -43,16 +54,20 @@ public final class Bchohan extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
     }
-/*    public boolean  isNumber(String num){
+
+    //金額の数字確認と型の変更処理
+    public boolean  isNumber(String num){
+        int num2 = 0;
         try{
-            Integer.parseInt(num);
+            num2 = Integer.parseInt(num);
+            argsint = num2;
             return true;
         } catch(NumberFormatException e){
             return false;
         }
 
-    }*/
-
+    }
+/*
     public static boolean tryParse(String num, MutableInteger result){
         try{
             int i = Integer.parseInt(num);
@@ -61,5 +76,5 @@ public final class Bchohan extends JavaPlugin {
         } catch (NumberFormatException e){
             return false;
         }
-    }
+    }*/
 }
